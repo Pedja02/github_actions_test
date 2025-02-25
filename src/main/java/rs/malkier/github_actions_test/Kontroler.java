@@ -15,6 +15,6 @@ public class Kontroler {
 
   @GetMapping("/vatrogasac")
   public String hello2() {
-    return "Milivoje policajac";
+    return "VEROVALAAA SLEEEPOOOOOOO";
   }
 }
