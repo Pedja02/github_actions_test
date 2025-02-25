@@ -1,0 +1,24 @@
+name: Spotless Check
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  spotless:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kloniraj repozitorijum
+        uses: actions/checkout@v4
+
+      - name: Podesi javu
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '23'
+          cache: 'maven'
+
+      - name: pokreni spottless
+        run: mvn spotless:apply
