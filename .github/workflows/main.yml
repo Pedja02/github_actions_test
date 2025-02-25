@@ -5,6 +5,9 @@ on:
     branches:
       - '**'
 
+permissions:
+  contents: write
+
 jobs:
   spottless_pokusaj:
     runs-on: ubuntu-latest
